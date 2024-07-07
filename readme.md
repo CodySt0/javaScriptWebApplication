@@ -1,1 +1,1 @@
-Testing out the read me for this project.
+Making a weather app for this project
