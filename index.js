@@ -13,7 +13,7 @@ weatherForm.addEventListener("submit", async (event) => {
       const weatherData = await getWeatherData(city);
       displayWeatherInfo(weatherData);
     } catch (error) {
-      console.log(error);
+      console.error(error);
       displayError(error);
     }
   } else {
@@ -23,11 +23,22 @@ weatherForm.addEventListener("submit", async (event) => {
 
 //gets weather data
 async function getWeatherData(city) {
-  const apiUrl = `http://api.weatherapi.com/v1`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  const response = await fetch(apiUrl);
+  //   console.log(response);
+
+  // if response if not okay, throw a new error
+  // if response is okay return response, convert to json format
+  if (!response.ok) {
+    throw new Error("Could not fetch weather data");
+  }
+  return await response.json();
 }
 
 //displays weather info
-function displayWeatherInfo(data) {}
+function displayWeatherInfo(data) {
+  console.log(data);
+}
 
 //gets emjoi for weather
 function getWeatherEmoji(weatherId) {}
