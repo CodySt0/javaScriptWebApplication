@@ -43,6 +43,7 @@ button[type="submit"]:hover {
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px black;
 }
 
 h1 {
@@ -71,11 +72,7 @@ p {
 .descriptionDisplay {
   font-weight: bold;
   font-size: 2rem;
-}
-
-.weatherEmoji {
-  margin: 0;
-  font-size: 8rem;
+  font-style: italic;
 }
 
 .errorDisplay {

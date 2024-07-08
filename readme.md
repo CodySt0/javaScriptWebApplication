@@ -1,1 +1,1 @@
-Making a weather app for this project
+Made a simple weather app. This app gets data from an API such as city, temp, humidity, and degrees which converts into Fahrenheit. Displays information to user, and throws an error message if an invalid city is searched. I had a lot of fun on this assignment! Thanks for taking a look at it!
